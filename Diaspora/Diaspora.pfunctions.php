@@ -93,9 +93,10 @@ EOT;
       $date = " <small>(" . $opts['date'] . ")</small>";
     }
 
-    // parse the content again 
+    // parse the inner content again 
     $msg = $title . $msg . $sub . $date;
-    $po = $parser->parse($msg, $parser->mTitle, new ParserOptions());
+    $lp = new Parser();
+    $po = $lp->parse($msg, $parser->mTitle, $parser->mOptions);
     $msg = $po->getText();
 
     // generate output string
