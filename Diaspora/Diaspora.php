@@ -20,7 +20,7 @@ $wgExtensionCredits['other'][] = array(
   'name' => 'Diaspora MW extension',
   'author' => array( 'Florian Staudacher' ),
   'version' => '0.0.1',
-  'url' => 'https://github.com/Raven24/diaspora-mw',
+  'url' => 'https://github.com/Raven24/diaspora-mediawiki',
   'descriptionmsg' => 'diaspora-desc',
 );
 
