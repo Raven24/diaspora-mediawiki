@@ -40,6 +40,11 @@ div.msgbox .msg {
   vertical-align: middle;
 }
 
+div.msgbox.success,
+div.msgbox.error {
+  font-size: 100%;
+}
+
 div.msgbox.notice {
   color: #3A87AD;
   background-color: #D9EDF7;
