@@ -1,0 +1,134 @@
+
+/**
+ * this file contains override styles for the 'Vector' skin
+ * to make it look more like the Diaspora theme
+ */
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-Regular-webfont.eot');
+    src: url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-Regular-webfont.woff') format('woff'),
+         url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoBoldCondensed';
+    src: url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-BoldCondensed-webfont.eot');
+    src: url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-BoldCondensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-BoldCondensed-webfont.woff') format('woff'),
+         url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-BoldCondensed-webfont.ttf') format('truetype'),
+         url('http://diaspora-project.org/misc/roboto-fontfacekit/Roboto-BoldCondensed-webfont.svg#RobotoBoldCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: "RobotoRegular", Helvetica, Verdana, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "RobotoBoldCondensed", Helvetica, Verdana, Arial, sans-serif;
+}
+
+
+/** header **/
+#mw-page-base {
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 4px #333333;
+  background: url("http://diaspora-project.org/sites/default/files/logo.png") no-repeat 1em center #222;
+  background-size: auto 3.5em;
+  position: relative;
+}
+
+#p-logo {
+  top: -88px;
+  height: auto;
+}
+
+#p-logo a {
+  background: transparent !important;
+  height: 5em;
+}
+
+#mw-head-base, #p-namespaces, div.vectorTabs, div.vectorMenu h5 a {
+  background: transparent !important;
+}
+
+#mw-head a {
+  color: #FFF;
+  text-shadow: 1px 1px 2px #000;
+}
+#mw-head a.new, #mw-head .new a {
+  color: #FF0000;
+}
+
+#mw-head a:visited {
+  color: #f1f1f1;
+}
+#mw-head a.new:visited, #mw-head .new a:visited {
+  color: #FF0F00;
+}
+
+div.vectorTabs ul li {
+  background: rgb(34,34,34); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgb(34,34,34) 0%, rgb(63,63,63) 49%, rgb(68,68,68) 50%, rgb(85,85,85) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(34,34,34)), color-stop(49%,rgb(63,63,63)), color-stop(50%,rgb(68,68,68)), color-stop(100%,rgb(85,85,85))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgb(34,34,34) 0%,rgb(63,63,63) 49%,rgb(68,68,68) 50%,rgb(85,85,85) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgb(34,34,34) 0%,rgb(63,63,63) 49%,rgb(68,68,68) 50%,rgb(85,85,85) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgb(34,34,34) 0%,rgb(63,63,63) 49%,rgb(68,68,68) 50%,rgb(85,85,85) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgb(34,34,34) 0%,rgb(63,63,63) 49%,rgb(68,68,68) 50%,rgb(85,85,85) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#555555',GradientType=0 ); /* IE6-9 */
+}
+
+div.vectorTabs span {
+  border-right: 1px solid black;
+  background: transparent !important;
+}
+
+div.vectorTabs li.selected {
+  background: rgb(34,34,34); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgb(34,34,34) 0%, rgb(89,89,89) 36%, rgb(114,114,114) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(34,34,34)), color-stop(36%,rgb(89,89,89)), color-stop(100%,rgb(114,114,114))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgb(34,34,34) 0%,rgb(89,89,89) 36%,rgb(114,114,114) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgb(34,34,34) 0%,rgb(89,89,89) 36%,rgb(114,114,114) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgb(34,34,34) 0%,rgb(89,89,89) 36%,rgb(114,114,114) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgb(34,34,34) 0%,rgb(89,89,89) 36%,rgb(114,114,114) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#727272',GradientType=0 ); /* IE6-9 */
+}
+
+div.vectorMenu ul {
+  background: #222;
+}
+
+
+/** nav panel **/
+div#mw-panel {
+  top: 88px;
+}
+
+div#mw-panel .portal .body {
+  background: transparent !important;
+  border-top: 1px solid rgba(0,0,0, .15);
+}
+
+
+/** content **/
+div#content {
+  background: white;
+  box-shadow: 0 0 7px #888888;
+  margin-right: 1em;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+
+/** footer **/
+div#footer {
+  background: transparent !important;
+}
