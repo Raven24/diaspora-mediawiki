@@ -1,0 +1,60 @@
+
+div.msgbox {
+  margin: .5em auto;
+  width: 70%;
+  padding: .5em 1.5em .5em 8em;
+  position: relative;
+  color: #C09853;
+  background: #FCF8E3;
+
+  border: 1px solid #FBEED5;
+  -mox-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+div.msgbox .msg em {
+  font-style: normal;
+  font-weight: bold;
+  margin-top: .4em;
+  display: inline-block;
+}
+
+div.msgbox .msg p {
+  margin-top: 0;
+}
+
+div.msgbox .img {
+  position: absolute;
+  top: .5em;
+  bottom: .5em;
+  left: 1.5em;
+  width: 5em;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.msgbox .msg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div.msgbox.notice {
+  color: #3A87AD;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+}
+
+div.msgbox.success {
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  color: #468847;
+}
+
+div.msgbox.error {
+  background-color: #F2DEDE;
+  border-color: #EED3D7;
+  color: #B94A48;
+}
+
