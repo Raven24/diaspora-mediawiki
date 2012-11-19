@@ -114,7 +114,7 @@ EOT
     );
 
     $opts = array_merge($defaults, $argv);
-    
+
     if( !$msg || $msg == "" ) {
       $msg = "Error: no content given!";
     }
@@ -123,7 +123,7 @@ EOT
     if( $opts['name'] != "blank" ) {
       $title = "<em>»» " . $opts['name'] . "</em><br>";
     }
-    
+
     $sub = "";
     if( $opts['sub'] != "" ) {
       $sub = "<br>" . $opts['sub'];
@@ -141,7 +141,7 @@ EOT
     }
     $cats = implode(" ", $cats);
 
-    $img = self::rand_str($opts['image'], 7);
+    $img = "msgbox-" . self::rand_str($opts['image'], 7);
     self::$msgboxStyles[$img] = self::getImage($opts['image']);
     self::addMsgboxStyles();
 
