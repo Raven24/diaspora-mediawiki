@@ -2,6 +2,10 @@
 /**
  * Hooks for Diaspora extension
  *
+ * for making modules or functions experimental, while they are being developed
+ * (testing them requires a user setting), see the sections marked with
+ * 'EXPERIMENTAL' and put the references there.
+ *
  * @file
  * @ingroup Extensions
  */
@@ -22,13 +26,16 @@ class DiasporaHooks {
         'diaspora-experimental' => true,
       ),
       'modules' => array(
-        'ext.diaspora.stylesheet',
-        'ext.diaspora.msgbox'
+        // EXPERIMENTAL
+        //'ext.diaspora.example',
       ),
-    ),
+    )
+    ,
     // put non-experimental modules here
     'stable' => array(
       'modules' => array(
+        'ext.diaspora.stylesheet',
+        'ext.diaspora.msgbox'
       ),
     ),
   );
@@ -82,9 +89,15 @@ class DiasporaHooks {
    * add custom functions to the parser
    */
   public static function setupParserFunctions( &$parser ) {
+
+    // put experimental parser extensions here
     if( self::isEnabled('experimental') ) {
-      $parser->setFunctionHook( 'msgbox', 'DiasporaPFunctions::msgbox' );
+      // EXPERIMENTAL
+      // $parser->setFunctionHook( 'example', 'DiasporaPFunctions::example' );
     }
+
+    // put non-experimental functions here
+    $parser->setFunctionHook( 'msgbox', 'DiasporaPFunctions::msgbox' );
 
     return true;
   }

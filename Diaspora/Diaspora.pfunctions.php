@@ -41,10 +41,11 @@ EOT;
   }
 
   /**
-   * if the image is not found, the logo is used
+   * if the file for the given image is not found, the logo which is configured
+   * in the MediaWiki settings is used
    */
   protected static function getImage( $name ) {
-    global $wgLogo, $IP;
+    global $wgLogo;
 
     $file = wfFindFile( $name );
     if( $file ) {
@@ -57,7 +58,7 @@ EOT;
   }
 
   /**
-   * wraps the given name string to resemble a category link
+   * wraps the given 'name' string to resemble the wiki markup for a category link
    */
   public static function categorize( $name ) {
     if( empty($name) ) {
@@ -67,7 +68,8 @@ EOT;
   }
 
   /**
-   * generate a 'random' string of arbitrary length
+   * generate a 'random' string (md5) of a given input string and
+   * return the first few characters of it, specified by the given length
    */
   protected static function rand_str( $str, $len=5 ) {
     return substr(md5($str), 0, $len);
@@ -75,7 +77,7 @@ EOT;
 
   /**
    * add a generated inline-style element to the head section
-   * to display the background images in msgboxes
+   * for displaying the background images for the pictograms in msgboxes
    */
   protected static function addMsgboxStyles() {
     global $wgParser;
@@ -95,7 +97,7 @@ EOT
   }
 
   /**
-   * generate a message box with the given parameters
+   * generate a message box from the given parameters.
    */
   public static function msgbox( $parser ) {
 
