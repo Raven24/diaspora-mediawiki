@@ -127,6 +127,15 @@ pre {
   overflow-x: auto;
 }
 
+/**
+ * font size fix, see:
+ * https://www.mediawiki.org/wiki/Special:Code/MediaWiki/108142
+ */
+div.mw-geshi div,
+div.mw-geshi div pre {
+  font-family: monospace, Courier !important;
+}
+
 
 /** footer **/
 div#footer {
