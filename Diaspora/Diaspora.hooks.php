@@ -71,7 +71,7 @@ class DiasporaHooks {
     return true;
   }
 
-  /** 
+  /**
    * add custom preferences to user page
    */
   public static function getPreferences( $user, &$defaultPreferences ) {
@@ -97,7 +97,7 @@ class DiasporaHooks {
     }
 
     // put non-experimental functions here
-    $parser->setFunctionHook( 'msgbox', 'DiasporaPFunctions::msgbox' );
+    $parser->setFunctionHook( 'msgbox', 'DiasporaExtMsgbox::msgbox' );
 
     return true;
   }

@@ -19,12 +19,13 @@ $wgExtensionCredits['other'][] = array(
   'path' => __FILE__,
   'name' => 'Diaspora MW extension',
   'author' => array( 'Florian Staudacher' ),
-  'version' => '0.0.1',
+  'version' => '0.0.2',
   'url' => 'https://github.com/Raven24/diaspora-mediawiki',
   'descriptionmsg' => 'diaspora-desc',
 );
 
-$wgAutoloadClasses['DiasporaHooks'] = dirname(__FILE__) . '/Diaspora.hooks.php';
+$wgAutoloadClasses['DiasporaHooks']      = dirname(__FILE__) . '/Diaspora.hooks.php';
+$wgAutoloadClasses['DiasporaExtMsgbox']  = dirname(__FILE__) . '/modules/ext.diaspora.msgbox.php';
 $wgAutoloadClasses['DiasporaPFunctions'] = dirname(__FILE__) . '/Diaspora.pfunctions.php';
 
 $wgExtensionMessagesFiles['Diaspora'] = dirname(__FILE__) . '/Diaspora.i18n.php';
