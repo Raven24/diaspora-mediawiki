@@ -108,7 +108,7 @@ EOT;
     }
 
     $text = implode("\n\nor\n\n", $output_arr);
-    return array($text, 'noparse' => true);
+    return array($text, 'noparse' => false);
   }
 
 }
