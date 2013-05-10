@@ -77,7 +77,7 @@ EOT;
     $argv = DiasporaPFunctions::extractArgs( $args );
 
     $defaults = array(
-      'params' => '',
+      'vars' => '',
       'lang'   => 'bash',
     );
 
@@ -88,8 +88,8 @@ EOT;
     }
 
     $cmd_variations = array($cmd);
-    if( !empty($opts['params']) ) {
-      $cmd_variations = self::createCmdStrings($opts['params'], $cmd);
+    if( !empty($opts['vars']) ) {
+      $cmd_variations = self::createCmdStrings($opts['vars'], $cmd);
     }
 
     $lang = "";
