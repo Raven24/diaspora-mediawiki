@@ -38,7 +38,7 @@ EOT;
     if( strpos($params_str, '/') !== false ) {
       return explode('/', $params_str);
     }
-    return $params_str;
+    return array($params_str);
   }
 
   /**
