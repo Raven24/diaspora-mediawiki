@@ -10,4 +10,5 @@ $magicWords = array();
 
 $magicWords['en'] = array(
   'msgbox' => array( 0, 'msgbox'),
+  'xtrplt' => array( 0, 'xtrplt'),
 );

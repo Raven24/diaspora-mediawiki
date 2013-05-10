@@ -94,6 +94,8 @@ class DiasporaHooks {
     if( self::isEnabled('experimental') ) {
       // EXPERIMENTAL
       // $parser->setFunctionHook( 'example', 'DiasporaPFunctions::example' );
+      $parser->setFunctionHook( 'xtrplt', 'DiasporaExtXtrplt::xtrplt' );
+
     }
 
     // put non-experimental functions here

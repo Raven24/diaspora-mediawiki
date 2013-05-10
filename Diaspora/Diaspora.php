@@ -26,6 +26,7 @@ $wgExtensionCredits['other'][] = array(
 
 $wgAutoloadClasses['DiasporaHooks']      = dirname(__FILE__) . '/Diaspora.hooks.php';
 $wgAutoloadClasses['DiasporaExtMsgbox']  = dirname(__FILE__) . '/modules/ext.diaspora.msgbox.php';
+$wgAutoloadClasses['DiasporaExtXtrplt']  = dirname(__FILE__) . '/modules/ext.diaspora.xtrplt.php';
 $wgAutoloadClasses['DiasporaPFunctions'] = dirname(__FILE__) . '/Diaspora.pfunctions.php';
 
 $wgExtensionMessagesFiles['Diaspora'] = dirname(__FILE__) . '/Diaspora.i18n.php';
@@ -50,3 +51,29 @@ $wgResourceModules += array(
     'styles' => 'ext.diaspora.msgbox.css',
   ),
 );
+
+// http://stackoverflow.com/a/8936492
+function array_cartesian($arrays) {
+  $result = array();
+  $keys = array_keys($arrays);
+  $reverse_keys = array_reverse($keys);
+  $size = intval(count($arrays) > 0);
+  foreach ($arrays as $array) {
+    $size *= count($array);
+  }
+  for ($i = 0; $i < $size; $i ++) {
+    $result[$i] = array();
+    foreach ($keys as $j) {
+      $result[$i][$j] = current($arrays[$j]);
+    }
+    foreach ($reverse_keys as $j) {
+      if (next($arrays[$j])) {
+        break;
+      }
+      elseif (isset ($arrays[$j])) {
+        reset($arrays[$j]);
+      }
+    }
+  }
+  return $result;
+}

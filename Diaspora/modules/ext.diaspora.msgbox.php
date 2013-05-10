@@ -59,8 +59,8 @@ EOT
 
     $opts = array_merge($defaults, $argv);
 
-    if( !$msg || $msg == "" ) {
-      $msg = "Error: no content given!";
+    if( !$msg || empty($msg) ) {
+      $msg = "ERROR: no content specified!";
     }
 
     $title = "";
@@ -69,17 +69,17 @@ EOT
     }
 
     $sub = "";
-    if( $opts['sub'] != "" ) {
+    if( !empty($opts['sub']) ) {
       $sub = "<br>" . $opts['sub'];
     }
 
     $date = "";
-    if( $opts['date'] != "" ) {
+    if( !empty($opts['date']) ) {
       $date = " <small>(" . $opts['date'] . ")</small>";
     }
 
     $cats = array();
-    if( $opts['cat'] != "" ) {
+    if( !empty($opts['cat']) ) {
       $cats = explode(",", $opts['cat']);
       $cats = array_map("DiasporaPFunctions::categorize", array_map("trim", $cats));
     }
